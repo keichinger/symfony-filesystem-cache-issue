@@ -65,6 +65,9 @@ class BuildComplexDataCache extends Command
         }
         $io->newLine();
 
+        $io->section("Retrieving and checking cached data");
+        dump($this->storage->get());
+
         $io->success("All done.");
 
         return 0;
